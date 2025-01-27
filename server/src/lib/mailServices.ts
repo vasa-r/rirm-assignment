@@ -1,4 +1,4 @@
-import transporter from "../config/nodemailerConfig";
+import transporter from "../config/mailerConfig";
 import { Job } from "../types/types";
 
 const sendVerificationEmail = async (email: string, otp: string) => {

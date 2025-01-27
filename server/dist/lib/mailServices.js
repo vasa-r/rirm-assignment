@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.sendJobAlert = exports.sendVerificationEmail = void 0;
-const nodemailerConfig_1 = __importDefault(require("../config/nodemailerConfig"));
+const mailerConfig_1 = __importDefault(require("../config/mailerConfig"));
 const sendVerificationEmail = (email, otp) => __awaiter(void 0, void 0, void 0, function* () {
     const mailOptions = {
         from: process.env.EMAIL_USER,
@@ -85,7 +85,7 @@ const sendVerificationEmail = (email, otp) => __awaiter(void 0, void 0, void 0, 
     `,
     };
     try {
-        yield nodemailerConfig_1.default.sendMail(mailOptions);
+        yield mailerConfig_1.default.sendMail(mailOptions);
     }
     catch (error) {
         console.error("Error sending email verification:", error);
@@ -162,7 +162,7 @@ const sendJobAlert = (companyName, companyEmail, candidateEmail, job) => __await
     `,
     };
     try {
-        yield nodemailerConfig_1.default.sendMail(mailOptions);
+        yield mailerConfig_1.default.sendMail(mailOptions);
     }
     catch (error) {
         console.error("Error sending job alert:", error);

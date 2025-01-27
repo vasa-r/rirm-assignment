@@ -15,8 +15,6 @@ const transporter = nodemailer.createTransport({
     clientId: CLIENT_ID,
     clientSecret: CLIENT_SECRET,
     refreshToken: REFRESH_TOKEN,
-    // Optional, if you already have an access token:
-    // accessToken: 'Your-Access-Token-Here',
   },
 });
 
