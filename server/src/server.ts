@@ -7,6 +7,7 @@ import { statusCode } from "./types/types";
 import errorHandler from "./middleware/errorHandler";
 import companyRouter from "./routes/companyRoute";
 import verifyToken from "./middleware/verifyToken";
+import jobRouter from "./routes/jobRouter";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.get("/health", async (_, res) => {
 
 // app routes
 app.use("/api/company", companyRouter);
+app.use("/api/job", verifyToken, jobRouter);
 
 app.use("*", (_, res) => {
   res.status(statusCode.NOT_FOUND).json({

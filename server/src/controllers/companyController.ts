@@ -111,8 +111,6 @@ const loginCompany = async (req: Request, res: Response) => {
   try {
     const company = await Company.findOne({ companyEmail });
 
-    console.log(company);
-
     if (!company) {
       res.status(statusCode.NOT_FOUND).json({
         success: false,

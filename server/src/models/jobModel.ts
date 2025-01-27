@@ -6,6 +6,7 @@ interface IJob extends Document {
   jobDescription: string;
   jobExperience: "BEGINNER" | "INTERMEDIATE" | "EXPERT";
   endDate: string;
+  createdBy: mongoose.Schema.Types.ObjectId;
   appliedCandidates?: string[]; // just to store users emails
 }
 
@@ -22,6 +23,10 @@ const jobSchema = new Schema<IJob>({
     type: String,
     enum: ["BEGINNER", "INTERMEDIATE", "EXPERT"],
     default: "BEGINNER",
+  },
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Company",
   },
   endDate: {
     type: String,

@@ -31,6 +31,13 @@ export interface CustomError extends Error {
 }
 
 export interface CustomUserReq extends Request {
-  userId?: string | JwtPayload;
+  companyId?: string | JwtPayload;
   role?: string | JwtPayload;
+}
+
+export interface Job {
+  jobTitle: string;
+  jobDescription: string;
+  jobExperience: "BEGINNER" | "INTERMEDIATE" | "EXPERT";
+  endDate: string;
 }
