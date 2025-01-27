@@ -64,5 +64,5 @@
 
 ## Live Deployment
 
-- **Frontend**: [Vercel URL]()
-- **Backend**: [Render]()
+- **Frontend**: [Vercel URL](https://rirm-assignment-lac.vercel.app/)
+- **Backend**: [Render](https://rirm-assignment.onrender.com/health)
