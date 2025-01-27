@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const jobController_1 = require("../controllers/jobController");
+const jobRouter = (0, express_1.Router)();
+jobRouter.post("/create", jobController_1.createJob);
+jobRouter.patch("/update/:jobId", jobController_1.updateJob);
+jobRouter.delete("/delete/:jobId", jobController_1.deleteJob);
+jobRouter.get("/", jobController_1.getJobs);
+jobRouter.get("/:jobId", jobController_1.getJobById);
+jobRouter.post("/notify/:jobId", jobController_1.notifyCandidates);
+exports.default = jobRouter;
