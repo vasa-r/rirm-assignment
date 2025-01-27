@@ -115,9 +115,10 @@ const deleteJob = async (req: Request, res: Response) => {
   }
 };
 
-const getJobs = async (req: Request, res: Response) => {
+const getJobs = async (req: CustomUserReq, res: Response) => {
+  const { companyId } = req;
   try {
-    const jobs = await Job.find();
+    const jobs = await Job.find({ createdBy: companyId });
 
     res.status(200).json({
       success: true,
