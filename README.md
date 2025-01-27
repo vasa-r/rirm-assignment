@@ -28,15 +28,15 @@
 
    - Backend `.env` file:
      ```env
-        JWT_SECRET = secret
-        PORT = 3000
-        MONGO_URI =
-        IS_PRODUCTION = false
-        CLIENT_ID = OAUTH
-        CLIENT_SECRET = 0AUTH
-        CALLBACK_URL = http://localhost:3000/api/auth/oauth
-        CLIENT_URL = http://localhost:5173
-        BASE_URL = http://localhost:5173
+         PORT = 3000
+         MONGO_URI = mongodb uri
+         JWT_SECRET = jwt secret
+         NODE_ENV = development
+         USER_EMAIL = nodemailer email
+         CLIENT_SECRET = google oauth CLIENT_SECRET
+         CLIENT_ID = google oauth CLIENT_ID
+         REFRESH_TOKEN = google oauth REFRESH_TOKEN
+         ACCESS_TOKEN = optional no need
      ```
    - Frontend `.env` file:
      ```env
